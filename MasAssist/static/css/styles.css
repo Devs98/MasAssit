@@ -76,9 +76,14 @@
   }
 }
 
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirLTStd-Black.otf');
+}
+
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Avenir';
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -3029,8 +3034,12 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
+
+
 .btn-primary {
   color: #fff;
+  
+  font-size: 13.90px;
   background-color: #6CABDD;
   border-color: #6CABDD;
   border-radius: 10rem;
@@ -7846,7 +7855,11 @@ textarea.form-control-lg {
 
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #7481bc;
+  border-radius: 20px;
+  padding: 8px;
+  margin-left: 13rem;
+  margin-right: 16rem;
 }
 
 .bg-black {
@@ -11786,11 +11799,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-weight: bold;
 }
 .cuadroFooter{
-  font-size: 16px;
-  color: #ffffff;
+  color: #fff;
   background: #7481bc;
   padding: 10px;
-  border-radius: 20px;
-  width: 50%;
-  margin-left: 20em;
+  display: flex;
+  justify-content: center;
+  margin-left: 13rem;
+  margin-right: 16rem;
 }
