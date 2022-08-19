@@ -1,0 +1,88 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+<section class="page-section bg-light"  id="portfolio">
+    <div class="container">
+        <div class="bg-image img-fluid" style="background: url('../static/img/Quiero-ser-proveedor/Red-de-provedores.png')no-repeat 0px 0px">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6 offset-md-6">
+                        <input type="text" name="" id="" placeholder="l Nombre Completo" class="form-control mt-1 border border-primary rounded-pill">
+                    </div>
+                    <div class="col-md-3 offset-md-3">
+                        <input type="text" name="" id="" placeholder="l Correo Electronico" class="form-control mt-2 border border-primary rounded-pill">
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <input type="text" name="" id="" placeholder="l Telefono" class="form-control mt-2 border border-primary rounded-pill">
+                    </div>
+                    <div class="col-md-12">
+                        <textarea rows="3" name="" id="" placeholder="l Comentarios" class="form-control mt-2 border border-primary" style="border-radius: 10px;"></textarea>
+                    </div>
+                </div>       
+                <button class="btn btn-info mt-2">ENVIAR</button>   
+                </form>
+        </div>
+        
+    </div>
+</section>
+
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <h3 class="section-heading text-info text-center">Contamos con una amplia red de proveedores de servicios que hemos consolidado con los más altos estándares de calidad, segurdad, experiencia y ética</h3>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4 mt-5">
+                <div class="portfolio-item">
+                        <img style="position: absolute;" class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Certificado-3.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mt-2">
+                <div class="portfolio-item">
+                        <img  class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Abogados.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mt-2">
+                <div class="portfolio-item">
+                        <img class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Mecanicos.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mt-5">
+                <div class="portfolio-item">
+                        
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="portfolio-item">
+                        <img class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Ambulancia.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 ">
+                <div class="portfolio-item">
+                        <img class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Gruas.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mt-4 ">
+                <div class="portfolio-item">
+                        <img class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Choferes.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mt-4 ">
+                <div class="portfolio-item">
+                        <img class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Medicos.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mt-4 ">
+                <div class="portfolio-item">
+                        <img class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Plomeros.png' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mt-4 ">
+                <div class="portfolio-item">
+                        <img class="img-fluid" src="{% static 'img/Quiero-ser-proveedor/Suministro.png' %}" alt="..." />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

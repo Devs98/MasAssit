@@ -6899,7 +6899,7 @@ textarea.form-control-lg {
 }
 
 .border-primary {
-  border-color: #ffc800 !important;
+  border-color: #154289 !important;
 }
 
 .border-secondary {
@@ -7744,7 +7744,7 @@ textarea.form-control-lg {
 
 .text-info {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
+  color: #154289 !important;
 }
 
 .text-warning {
@@ -11485,6 +11485,8 @@ header.masthead .masthead-heading {
   justify-content: center;
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
+  
+
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
@@ -11806,4 +11808,23 @@ section#contact form#contactForm :-ms-input-placeholder {
   justify-content: center;
   margin-left: 13rem;
   margin-right: 16rem;
+}
+
+.btn-wsp{
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  background: #0df053;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+.btn-wsp:hover{
+text-decoration: none;
+color:#0df053;
+background: #fff;
 }
