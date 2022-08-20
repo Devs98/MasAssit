@@ -24,4 +24,5 @@ urlpatterns = [
     path('quienes-ser-proovedor/', views.proveedor, name='proovedor'),
     path('reembolsos/', views.reembolsos, name='reembolsos'),
     path('pqrs/', views.pqrs, name='pqrs'),
+    path('contacto/', views.contacto, name='contacto'),
 ]

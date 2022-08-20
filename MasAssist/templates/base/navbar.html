@@ -41,7 +41,7 @@
                     <li class="nav-item"><a class="btn btn-primary" href="{% url 'home' %}">Productos Corporativos</a></li>
                     <li class="nav-item"><a class="btn btn-primary" href="{% url 'quienes-somos' %}">Quienes Somos</a></li>
                     <li class="nav-item"><a class="btn btn-primary" href="#about">Blog</a></li>
-                    <li class="nav-item"><a class="btn btn-primary" href="#team">Contacto</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="{% url 'contacto' %}">Contacto</a></li>
                     <li class="nav-item"><a class="btn btn-primary" href="{% url 'reembolsos' %}">Reembolsos</a></li>
                     <li class="nav-item"><a class="btn btn-primary" href="{% url 'proovedor' %}">Quiero ser Proveedor</a></li>
                 </ul>
@@ -141,6 +141,24 @@
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  {% if messages %}
+
+  {% for m in messages %}
+  <script>
+    Swal.fire({
+      'title': 'Felicitaciones',
+      'text': '{{ m }}',
+      'icon': 'success',
+    })
+  </script>
+
+  {% endfor %}
+
+  {% endif %}
+
 </body>
 
 </html>

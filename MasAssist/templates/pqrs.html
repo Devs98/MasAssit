@@ -5,6 +5,128 @@
 <section class="page-section bg-light" id="portfolio">
     <div class="container">
         <img src="{% static 'img/PQRS/Mas-assist-Colombia.png' %}" alt="holi" class="img-fluid">
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="row mt-5">
+                <div class="col-md-5">
+                    <label for="" class="text-secondary">¿Tu comentario está asociado a?</label>
+                    <select class="form-select border-info" name="peticion" required>
+                        <option disabled selected>--Seleccionar--</option>
+                        <option value="Felicitaciones">Felicitaciones</option>
+                        <option value="Peticion">Peticion</option>
+                        <option value="Queja">Queja</option>
+                        <option value="Sugerencia">Sugerencia</option>
+                      </select>
+                </div>
+
+                <div class="col-md-5 offset-md-2 mt-4">
+                    <label for="" class="text-secondary">¿A dónde te podemos llamar?</label>
+                    <input type="text" class=" form-control border-info" placeholder="Telefono Fijo" name="telefono" >
+                </div>
+
+                <div class="col-md-5 mt-4">
+                    <label for="" class="text-secondary">¿De qué producto quieres hacernos tus comentarios?</label>
+                    <select class="form-select border-info" name="productos" required>
+                        <option disabled selected>--Seleccionar--</option>
+                        <option value="Asistencias en salud">Asistencias en salud</option>
+                        <option value="Asistencia al viajero">Asistencia al viajero</option>
+                        <option value="Asistencia vial">Asistencia vial</option>
+                        <option value="Asistencia a mascotas">Asistencia a mascotas</option>
+                        <option value="Asistencia a adulto mayor">Asistencia a adulto mayor</option>
+                        <option value="Asistencia funeraria">Asistencia funeraria</option>
+                        <option value="Asistencia escolar">Asistencia escolar</option>
+                        <option value="Asistencia ejecutiva">Asistencia ejecutiva</option>
+                        <option value="Asistencia para motos">Asistencia para motos</option>
+                        <option value="Viajes asistencia para mujeres">Viajes asistencia para mujeres</option>
+                        <option value="Seguridad personal e info">Seguridad personal e info</option>
+                        <option value="Garantia extendida">Garantia extendida</option>
+                        <option value="Viajes nacionales">Viajes nacionales</option>
+                        <option value="Viajes internacionales">Viajes internacionales</option>
+                        <option value="Psicología">Psicología</option>
+                        <option value="Futuros padres">Futuros padres</option>
+                        <option value="Telemedicina nutricional y bienestar">Telemedicina nutricional y bienestar</option>
+                        <option value="Bicicletas">Bicicletas</option>
+                        <option value="Deportes extremos">Deportes extremos</option>
+                        <option value="Concierge">Concierge</option>
+                      </select>
+                </div>
+                
+                <div class="col-md-5 offset-md-2 mt-2">
+                    <input type="text" class=" form-control border-info" placeholder="Celular" name="celular" required>
+                </div>
+
+                <div class="col-md-5 mt-4">
+                    <label for="" class="text-secondary">¿Por qué medio quieres que te demos respuesta?</label>
+                    <select class="form-select border-info" name="medio-respuesta" required>
+                        <option  value="LLAMADA TELEFÓNICA" selected>LLAMADA TELEFÓNICA</option>
+                        <option value="CARTA">CARTA</option>
+                        <option value="CORREO ELECTRONICO">CORREO ELECTRONICO</option>
+                      </select>
+                </div>
+
+                <div class="col-md-5 offset-md-2">
+                    <label for="" class="text-secondary">Escríbenos tus comentarios</label>
+                    <textarea name="comentario" id="" cols="" rows="" class="form-control border-info"></textarea>
+                </div>
+
+                <div class="col-md-5 mt-4">
+                    <label for="" class="text-secondary">¿Qué tipo de identificación tienes?</label>
+                    <select class="form-select border-info" name="tipo-documento" required>
+                        <option value="" disabled selected>--Seleccionar--</option>
+                        <option  value="CEDULA DE CIUDADANIA">CEDULA DE CIUDADANIA</option>
+                        <option value="DOCUMENTO DE IDENTIDAD">DOCUMENTO DE IDENTIDAD</option>
+                        <option value="PASAPORTE">PASAPORTE</option>
+                      </select>
+                    <input type="text" class=" form-control border-info mt-2" placeholder="Número de identificación" name="num-documento" required>
+                </div>
+
+                <div class="col-md-5 offset-md-2 mt-4">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input border-info" name="persona-empresa" required>
+                        <label  class="form-check-label" for="">¿Estás registrando esta solicitud en nombre de otra persona o empresa?</label>
+                    </div>
+
+                    <div class="form-check mt-4">
+                        <input type="checkbox" class="form-check-input border-info" name="politica" required>
+                        <label for="">Autorizo el tratamiento de mis datos de acuerdo con la Política de tratamiento de datos personales</label>
+                    </div>
+
+                   
+                </div>
+
+                <div class=" col-md-5">
+                    <label for="" class="text-secondary">¿Cómo te llamas?</label>
+                    <input type="text" class=" form-control border-info" placeholder="Primer Nombre (Obligatorio)" name="primer-nombre" required>
+                    <input type="text" class=" form-control border-info mt-2" placeholder="Segundo Nombre" name="segundo-nombre">
+                </div>
+
+                <div class="col-md-5 offset-md-2">
+                    <div class="form-check mt-4">
+                        <input type="checkbox" class="form-check-input border-info" name="autorizacion-voluntaria" required>
+                        <label for="">Autorizas voluntariamente que información general sea enviada por Correo electronico o Celular</label>
+                    </div>
+                </div>
+
+                <div class=" col-md-5 mt-4">
+                    <label for="" class="text-secondary">¿Cuales son tus apellidos?</label>
+                    <input type="text" class=" form-control border-info" placeholder="Primer Apellido (Obligatorio)" name="primer-apellido" required>
+                    <input type="text" class=" form-control border-info mt-2" placeholder="Segundo Apellido" name="segundo-apellido">
+                </div>
+
+                <div class="col-md-5 offset-md-2">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-outline-primary">Enviar</button>
+                    </div>
+                </div>
+
+                <div class=" col-md-5 mt-4">
+                    <label for="" class="text-secondary">¿Cual es tu correo electrónico?</label>
+                    <input type="email" class=" form-control border-info" name="email" required>
+                </div>
+
+            </div>
+        </form>
         
     </div>
 </section>

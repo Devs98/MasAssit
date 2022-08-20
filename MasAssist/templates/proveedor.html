@@ -2,32 +2,39 @@
 {% load static %}
 {% block content %}
 
-<section class="page-section bg-light"  id="portfolio">
+<section class="page-section bg-light p-5"  id="portfolio">
     <div class="container">
         <div class="bg-image img-fluid" style="background: url('../static/img/Quiero-ser-proveedor/Red-de-provedores.png')no-repeat 0px 0px">
-            <form action="">
-                <div class="row">
+            <br><br><br>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="row justify-content-end">
+                    
                     <div class="col-md-6 offset-md-6">
-                        <input type="text" name="" id="" placeholder="l Nombre Completo" class="form-control mt-1 border border-primary rounded-pill">
+                        <h6 class="text-info">Registro de contacto</h6>
+                        <input type="text" name="name" id="" placeholder="l Nombre Completo" class="form-control mt-1 border border-primary rounded-pill">
                     </div>
-                    <div class="col-md-3 offset-md-3">
-                        <input type="text" name="" id="" placeholder="l Correo Electronico" class="form-control mt-2 border border-primary rounded-pill">
+                    <div class="col-md-3">
+                        <input type="text" name="email" id="" placeholder="l Correo Electronico" class="form-control mt-2 border border-primary rounded-pill">
                     </div>
-                    <div class="col-md-5 offset-md-2">
-                        <input type="text" name="" id="" placeholder="l Telefono" class="form-control mt-2 border border-primary rounded-pill">
+                    <div class="col-md-3 offset-md-0">
+                        <input type="text" name="phone" id="" placeholder="l Telefono" class="form-control mt-2 border border-primary rounded-pill">
                     </div>
-                    <div class="col-md-12">
-                        <textarea rows="3" name="" id="" placeholder="l Comentarios" class="form-control mt-2 border border-primary" style="border-radius: 10px;"></textarea>
+                    <div class="col-md-6 offset-md-6">
+                        <textarea rows="3" name="comment" id="" placeholder="l Comentarios" class="form-control mt-2 border border-primary" style="border-radius: 10px;"></textarea>
                     </div>
+                      <div class="col-md-6">
+                        <button class="btn btn-info mt-4">ENVIAR</button> 
+                      </div>
                 </div>       
-                <button class="btn btn-info mt-2">ENVIAR</button>   
                 </form>
+                <br><br><br><br><br><br><br><br><br>
         </div>
         
     </div>
 </section>
 
-<section class="page-section bg-light" id="portfolio">
+<section class="page-section bg-light p-5" id="portfolio">
     <div class="container">
         <h3 class="section-heading text-info text-center">Contamos con una amplia red de proveedores de servicios que hemos consolidado con los más altos estándares de calidad, segurdad, experiencia y ética</h3>
         <div class="row">

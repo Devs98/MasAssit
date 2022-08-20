@@ -1,0 +1,86 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+<section class="page-section bg-light p-5" id="portfolio">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <img src="{% static 'img/Contacto/Contacto.png' %}" alt="" class="img-fluid">
+        </div>
+
+        <form action="" method="POST">
+          {% csrf_token %}
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <p class="text-info">Registro de contacto</p>
+                    <input type="text" name="name" id="" placeholder="l Nombre Completo" class="form-control mt-1 border border-primary rounded-pill" required>
+                </div>
+                <div class="col-md-5">
+                    <input type="email" name="email" id="" placeholder="l Correo Electronico" class="form-control mt-2 border border-primary rounded-pill" required>
+                </div>
+                <div class="col-md-5 offset-md-2">
+                    <input type="number" name="phone" id="" placeholder="l Telefono" class="form-control mt-2 border border-primary rounded-pill">
+                </div>
+                <div class="col-md-12">
+                    <textarea rows="3" name="comment" id="" placeholder="l Comentarios" class="form-control mt-2 border border-primary" style="border-radius: 10px;"></textarea>
+                </div>
+                <p class="text-info mt-2">Producto de Interés</p>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="adulto">
+                    <label class="form-check-label text-info" for="flexRadioDefault1">
+                      Adulto Mayor
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="legal" >
+                    <label class="form-check-label text-info" for="flexRadioDefault2">
+                      Legal
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="garantia" >
+                    <label class="form-check-label text-info" for="flexRadioDefault2">
+                      Garantía Extendida
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="medico" >
+                    <label class="form-check-label text-info" for="flexRadioDefault2">
+                      Médico
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="funerario" >
+                    <label class="form-check-label text-info" for="flexRadioDefault2">
+                      Funerario
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="mascotas" >
+                    <label class="form-check-label text-info" for="flexRadioDefault2">
+                      Mascotas
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="hogar" >
+                    <label class="form-check-label text-info" for="flexRadioDefault2">
+                      Hogar
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input border-primary rounded-pill" type="checkbox" name="turismo" >
+                    <label class="form-check-label text-info" for="flexRadioDefault2">
+                      Turismo
+                    </label>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button class="btn btn-info mt-4">ENVIAR</button> 
+                  </div>
+            </div>
+
+            </form>
+    </div>
+</section>
+
+{% endblock %}
