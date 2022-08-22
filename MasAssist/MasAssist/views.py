@@ -44,3 +44,9 @@ def contacto(request):
         messages.success(request, 'Correo Enviado')
         return redirect('contacto')
     return render(request, 'contacto.html')
+
+def blog(request):
+    return render(request, 'blog.html')
+
+def eutanasia(request):
+    return render(request, 'eutanasia.html')

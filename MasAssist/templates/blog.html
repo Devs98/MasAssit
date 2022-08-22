@@ -1,0 +1,58 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+<div class="d-flex justify-content-center">
+   <img src="{% static 'img/blog/Blog.png' %}" alt="">
+</div><br><br>
+
+<div class="container">
+    <div class="row">
+      <div class="col-6 col-sm-4">
+        <h5 class="text-primary">¿Qué es la eutanasia en mascotas? 
+            ¿Cuando se debe considerar?
+        </h5>
+        <img src="{% static 'img/blog/Minuatura-eutanasia.png' %}" alt="">
+        <p>Sabemos que de tan solo decirlo la piel se te eriza, no es un tema del que nos guste hablar, 
+            pero definitivamente es algo en lo que debemos de estar informados
+            <a href="{% url 'eutanasia' %}" style="color: #6CABDD;">... Leer más</a>
+        </p>
+      </div>
+      <div class="col-6 col-sm-4">
+        <h5 class="text-primary">
+            Chips localizadores para mascotas ¿Cómo funcionan?
+        </h5>
+        <img style="border-radius:15px; width: 100%; margin-top: 1em; " src="{% static 'img/blog/Chip-localizador.png' %}" alt="">
+        <br><br><br>
+        <p>
+          La era de la tecnología nos ha traído cosas maravillosas que además de facilitarnos el día a día, nos brinda seguridad
+          y protección.
+          En el caso de las mascotas, nos ha traído algo invaluable: los chips localizadores.
+          <a href="#" style="color: #6CABDD;">... Leer más</a>
+        </p>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-end">
+        <div>
+          <h3>CATEGORIAS</h3>
+          <p>Salud</p>
+          <p>Viajes</p>
+          <p>Tutrismo</p>
+          <p>Noticias</p>
+
+          <h3>ENTRADAS RECIENTES</h3>
+          <p>¿Qué es la eutanasia en mascotas?</p> 
+          <p>¿Cuando se debe considerar?</p>
+          <p>Chips localizadores para mascotas ¿Cómo funcionan?</p>
+        </div>
+      </div>
+  
+      <!-- Force next columns to break to new line at md breakpoint and up -->
+      <div class="w-100 d-none d-md-block"></div>
+  
+      <div class="col-6 col-sm-4"></div>
+      <div class="col-6 col-sm-4"></div>
+    </div>
+  </div>
+
+
+{% endblock %}
