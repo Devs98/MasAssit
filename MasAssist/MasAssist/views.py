@@ -46,7 +46,25 @@ def contacto(request):
     return render(request, 'contacto.html')
 
 def blog(request):
+    if request.method == 'POST':
+        subject = "Web Mas Assist - Comentarios en blog"
+        message = "Nombre: " + request.POST['name'] +" Correo Electronico:  " + request.POST['email'] + " URL: " + request.POST.get('url', 'False') + " Comentario: " +  request.POST['comment']
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = ['desarrollodigitalaa@gmail.com', 'dtecnologia99@gmail.com']
+        send_mail(subject, message, email_from, recipient_list)
+        messages.success(request, 'Comentario Publicado')
+        return redirect('blog')
+
+    elif request.method == 'POST':
+        subject = "Web Mas Assist - Suscripción Newsletter"
+        message = "Nombre: " + request.POST['nameSub'] + "Correo Electronico: " + request.POST['emailSub']
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = ['desarrollodigitalaa@gmail.com', 'dtecnologia99@gmail.com']
+        send_mail(subject, message, email_from, recipient_list)
+        messages.success(request, 'Información Enviada')
+        return redirect('blog')
     return render(request, 'blog.html')
+    
 
 def eutanasia(request):
     return render(request, 'eutanasia.html')

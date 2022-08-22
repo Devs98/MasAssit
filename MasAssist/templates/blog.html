@@ -6,14 +6,14 @@
    <img src="{% static 'img/blog/Blog.png' %}" alt="">
 </div><br><br>
 
-<div class="container">
+<div class="container-sm">
     <div class="row">
       <div class="col-6 col-sm-4">
         <h5 class="text-primary">¿Qué es la eutanasia en mascotas? 
             ¿Cuando se debe considerar?
         </h5>
-        <img src="{% static 'img/blog/Minuatura-eutanasia.png' %}" alt="">
-        <p>Sabemos que de tan solo decirlo la piel se te eriza, no es un tema del que nos guste hablar, 
+        <img src="{% static 'img/blog/Minuatura-eutanasia.png' %}" alt="" class="img-fluid">
+        <p style="font-family: 'Montserrat', sans-serif;">Sabemos que de tan solo decirlo la piel se te eriza, no es un tema del que nos guste hablar, 
             pero definitivamente es algo en lo que debemos de estar informados
             <a href="{% url 'eutanasia' %}" style="color: #6CABDD;">... Leer más</a>
         </p>
@@ -22,33 +22,54 @@
         <h5 class="text-primary">
             Chips localizadores para mascotas ¿Cómo funcionan?
         </h5>
-        <img style="border-radius:15px; width: 100%; margin-top: 1em; " src="{% static 'img/blog/Chip-localizador.png' %}" alt="">
-        <br><br><br>
-        <p>
+        <img class="img-fluid" src="{% static 'img/blog/Chip-localizador-2.png' %}" alt="">
+        <p style="font-family: 'Montserrat', sans-serif;">
           La era de la tecnología nos ha traído cosas maravillosas que además de facilitarnos el día a día, nos brinda seguridad
           y protección.
           En el caso de las mascotas, nos ha traído algo invaluable: los chips localizadores.
           <a href="#" style="color: #6CABDD;">... Leer más</a>
         </p>
       </div>
+
+      
+
       <div class="col-6 col-sm-4 d-flex justify-content-end">
         <div>
-          <h3>CATEGORIAS</h3>
-          <p>Salud</p>
-          <p>Viajes</p>
-          <p>Tutrismo</p>
-          <p>Noticias</p>
 
           <h3>ENTRADAS RECIENTES</h3>
-          <p>¿Qué es la eutanasia en mascotas?</p> 
-          <p>¿Cuando se debe considerar?</p>
-          <p>Chips localizadores para mascotas ¿Cómo funcionan?</p>
+          <p><a href="{% url 'eutanasia' %}" class="btn btn-link text-start">¿Qué es la eutanasia en mascotas? ¿Cómo se debe considerar</a></p> 
+          <p><a href="#" class="btn btn-link text-start">Chips localizadores para mascotas ¿Cómo funcionan?</a> </p>
+
+          <form class="d-flex"> <input class="form-control mr-2" type="search" placeholder="Buscar" aria-label="Search"> <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> </form>
+
+          <form action="" method="POST" class="mt-5">
+            {% csrf_token %}
+            <h5>Newsletter</h5>
+            <label for="">Nombre</label>
+            <input type="text" name="nameSub" id="" class="form-control" placeholder="Nombre" required>
+            <label for="">Email</label>
+            <input type="email" name="emailSub" id="" class="form-control" placeholder="Correo Electrónico" required>
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-primary mt-2">Suscribirse al Newsletter</button>
+            </div>
+          </form>
         </div>
       </div>
   
       <!-- Force next columns to break to new line at md breakpoint and up -->
       <div class="w-100 d-none d-md-block"></div>
-  
+        <form action="" method="POST">
+          {% csrf_token %}
+          <h5>Dejános un comentario</h5>
+          <textarea rows="3" name="comment" id="" placeholder="l Comentarios" class="form-control mt-2 border border-primary" style="border-radius: 10px;" required></textarea>
+          <label for="">Nombre</label>
+          <input type="text" name="name" id="" class="form-control text-primary border-primary" placeholder="Nombre" required>
+          <label for="">Correo Electrónico</label>
+          <input type="email" name="email" id="" class="form-control text-primary border-primary" placeholder="Correo" required>
+          <label for="">Web</label>
+          <input type="url" name="url" id="" class="form-control text-primary border-primary" placeholder="Web">
+          <button class="btn btn-outline-primary mt-2 mb-5">Publicar</button>
+        </form>
       <div class="col-6 col-sm-4"></div>
       <div class="col-6 col-sm-4"></div>
     </div>
