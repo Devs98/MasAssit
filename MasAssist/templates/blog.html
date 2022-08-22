@@ -42,7 +42,7 @@
 
           <form class="d-flex"> <input class="form-control mr-2" type="search" placeholder="Buscar" aria-label="Search"> <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> </form>
 
-          <form action="" method="POST" class="mt-5">
+          <form action="{% url 'newsletter' %}" method="POST" class="mt-5" id="Newsletter">
             {% csrf_token %}
             <h5>Newsletter</h5>
             <label for="">Nombre</label>
@@ -58,7 +58,7 @@
   
       <!-- Force next columns to break to new line at md breakpoint and up -->
       <div class="w-100 d-none d-md-block"></div>
-        <form action="" method="POST">
+        <form action="" method="POST" id="Comentario">
           {% csrf_token %}
           <h5>Dejános un comentario</h5>
           <textarea rows="3" name="comment" id="" placeholder="l Comentarios" class="form-control mt-2 border border-primary" style="border-radius: 10px;" required></textarea>

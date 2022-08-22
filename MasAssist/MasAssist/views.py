@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
@@ -54,17 +55,18 @@ def blog(request):
         send_mail(subject, message, email_from, recipient_list)
         messages.success(request, 'Comentario Publicado')
         return redirect('blog')
-
-    elif request.method == 'POST':
-        subject = "Web Mas Assist - Suscripción Newsletter"
-        message = "Nombre: " + request.POST['nameSub'] + "Correo Electronico: " + request.POST['emailSub']
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['desarrollodigitalaa@gmail.com', 'dtecnologia99@gmail.com']
-        send_mail(subject, message, email_from, recipient_list)
-        messages.success(request, 'Información Enviada')
-        return redirect('blog')
     return render(request, 'blog.html')
     
+def Newsletter(request):
+        if request.method == 'POST':
+            subject = "Web Mas Assist - Suscripción Newsletter"
+            message = "Nombre: " + request.POST['nameSub'] + "Correo Electronico: " + request.POST['emailSub']
+            email_from = settings.EMAIL_HOST_USER
+            recipient_list = ['desarrollodigitalaa@gmail.com', 'dtecnologia99@gmail.com']
+            send_mail(subject, message, email_from, recipient_list)
+            messages.success(request, 'Información Enviada')
+            return redirect('blog')
+        return render(request, 'blog.html')
 
 def eutanasia(request):
     return render(request, 'eutanasia.html')
